@@ -1,0 +1,4 @@
+node_modules/ 
+auth/ 
+.env 
+firebase-admin.json 

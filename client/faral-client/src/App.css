@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #ffe6a7, #ffd6b0, #fcd34d, #fbbf24);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+/* Center card */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Card styling */
+.card {
+  background: #fff3e6;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fade-in 0.5s ease;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #d97706; /* warm Diwali orange */
+}
+
+.card p {
+  font-size: 1rem;
+  color: #7c4a0f;
+  margin-bottom: 1.5rem;
+}
+
+/* Input styling */
+input {
+  width: 80%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ffb347;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+}
+
+/* Button styling */
+button {
+  width: 30%;
+  padding: 0.8rem;
+  background-color: #f59e0b;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #d97706;
+}
+
+/* Modal styling */
+.modal {
+  min-width: 80%;
+  padding: 1rem;
+  z-index: 2;
+  background: #fff7ed;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: slide-down-fade-in 0.3s ease-out forwards;
+}
+
+.error {
+  max-width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: #ffe3e3;
+  color: #b91c1c;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slide-down-fade-in {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .card {
+    padding: 1.5rem 1rem;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  input, button {
+    font-size: 0.95rem;
+  }
+}
