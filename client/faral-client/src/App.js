@@ -28,7 +28,7 @@ function App() {
     }
   
     try {
-      const res = await fetch('https://faral-project.onrender.com/send', {
+      const res = await fetch('http://localhost:3000/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ number: phoneNumber, message })
